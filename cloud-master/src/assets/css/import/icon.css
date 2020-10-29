@@ -1,0 +1,1043 @@
+a.tic-btn,span.tic-btn{
+	display: inline-block;
+}
+a.tic-btn.disabled [class*=tic-icon],span.tic-btn.disabled [class*=tic-icon]{
+	cursor: not-allowed;
+}
+.tic-icon,.tic-icon--min,.tic-icon--max{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-repeat: no-repeat;
+	background-position: inherit;
+	background-size: contain;
+	font-size: 0;
+	vertical-align: middle;
+}
+.tic-icon--min{
+	width: 14px;
+	height: 14px;
+}
+.tic-icon--max{
+	width: 30px;
+	height: 30px;
+}
+/*消息提示 */
+.tic-icon-info{
+	background-image: url("../img/slice/svg/icon-info.svg");
+}
+.tic-icon-info:hover{
+	background-image: url("../img/slice/svg/icon-info-hover.svg");
+}
+/*消息提示 */
+.tic-icon-exit{
+	background-image: url("../img/slice/svg/icon-exit.svg");
+}
+.tic-icon-exit:hover{
+	background-image: url("../img/slice/svg/icon-exit-hover.svg");
+}
+/*圆*/
+.tic-icon-circular{
+	display: inline-block;
+	width:8px;
+	height:8px;
+	background:rgba(10,129,140,1);
+	box-shadow:0px 0px 4px 0px rgba(10,129,140,1);
+	border-radius:50%;
+}
+/*进度 圆点 */
+.tic-icon-progress{
+	background-image: url("../img/slice/svg/progress.svg");
+}
+/*搜索*/
+.tic-icon-search{
+	background-image: url("../img/slice/svg/search.svg");
+	width: 16px;
+	height: 16px;
+}
+/*最小化*/
+.tic-icon-minimize{
+	background-image: url("../img/slice/svg/icon-minimize-hover.svg");
+	width: 14px;
+	height: 14px;
+	opacity: .4;
+	background-size: 100%;
+}
+.tic-btn:hover .tic-icon-minimize,.tic-btn.actived .tic-icon-minimize{
+	opacity: 1;
+}
+.tic-btn.disabled:hover .tic-icon-minimize,.tic-btn.disabled .tic-icon-minimize{
+	opacity: .3;
+}
+/*最大化*/
+.tic-icon-maximize{
+	background-image: url("../img/slice/svg/icon-maximize.svg");
+	width: 14px;
+	height: 14px;
+}
+.tic-btn:hover .tic-icon-maximize,.tic-btn.actived .tic-icon-maximize{
+	background-image: url("../img/slice/svg/icon-maximize-hover.svg");
+}
+/*菜单-关闭*/
+.tic-icon-close{
+	width: 14px;
+	height: 14px;
+	background-image: url("../img/slice/svg/icon-close.svg");
+}
+.tic-btn:hover .tic-icon-close,.tic-btn.actived .tic-icon-close{
+	background-image: url("../img/slice/svg/icon-close-hover.svg");
+}
+/*录制*/
+.tic-icon-transcribe{
+	background-image: url("../img/slice/svg/icon-transcribe.svg");
+}
+.tic-btn:hover .tic-icon-transcribe,.tic-btn.actived .tic-icon-transcribe{
+	background-image: url("../img/slice/svg/icon-transcribe-hover.svg");
+}
+.tic-btn.disabled .tic-icon-transcribe{
+	background-image: url("../img/slice/svg/icon-transcribe-disabled.svg");
+}
+.tic-icon-transcribe.start:before{
+	content: '';
+	position: absolute;
+	top:50%;
+	left: 50%;
+	width: 6px;
+	height: 6px;
+	margin-left: -3px;
+	margin-top: -3px;
+	background-color: rgb(255, 104, 99);
+	border-radius: 2px;
+	animation-name: breath;
+	animation-duration: 1.5s;
+	animation-delay: 0.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	-webkit-animation-name: breath;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite
+}
+.tic-icon-transcribe.start,.tic-btn:hover .tic-icon-transcribe.start{
+	position: relative;
+	background-image: url("../img/slice/svg/icon-transcribe-start.svg");
+
+}
+@keyframes breath {
+	from,to {
+		opacity: .1
+	}
+
+	50% {
+		opacity: 1
+	}
+}
+/* 公告 */
+.tic-icon-notice{
+	background-image: url("../img/slice/svg/icon-notice.svg");
+	width: 42px;
+	height: 42px;
+}
+.tic-btn:hover .tic-icon-notice{
+	background-image: url("../img/slice/svg/icon-notice-hover.svg");
+}
+/*分享*/
+.tic-icon-share{
+	background-image: url("../img/slice/svg/icon-share.svg");
+}
+.tic-btn:hover .tic-icon-share,.tic-btn.actived .tic-icon-share{
+	background-image: url("../img/slice/svg/icon-share-hover.svg");
+}
+.tic-btn.disabled .tic-icon-share{
+	background-image: url("../img/slice/svg/icon-share-disabled.svg");
+}
+/*课件*/
+.tic-icon-courseware{
+	background-image: url("../img/slice/svg/icon-courseware.svg");
+}
+.tic-btn:hover .tic-icon-courseware,.tic-btn.actived .tic-icon-courseware{
+	background-image: url("../img/slice/svg/icon-courseware-hover.svg");
+}
+.tic-btn.disabled .tic-icon-courseware{
+	background-image: url("../img/slice/svg/icon-courseware-disabled.svg");
+}
+/*成员*/
+.tic-icon-people{
+	background-image: url("../img/slice/svg/icon-people.svg");
+}
+.tic-btn:hover .tic-icon-people,.tic-btn.actived .tic-icon-people{
+	background-image: url("../img/slice/svg/icon-people-hover.svg");
+}
+.tic-btn.disabled .tic-icon-people{
+	background-image: url("../img/slice/svg/icon-people-disabled.svg");
+}
+/*成员带提醒*/
+.tic-icon-people-handup{
+	background-image: url("../img/slice/svg/icon-people-handup.svg");
+}
+.tic-btn:hover .tic-icon-people-handup,.tic-btn.actived .tic-icon-people-handup{
+	background-image: url("../img/slice/svg/icon-people-handup-hover.svg");
+}
+.tic-btn.disabled .tic-icon-people-handup{
+	background-image: url("../img/slice/svg/icon-people-handup-disabled.svg");
+}
+.tic-icon-people.tips{
+	position: relative;
+}
+.tic-icon-people.tips:before{
+	content: '';
+	position: absolute;
+	top:0;
+	right: 0;
+	width: 6px;
+	height: 6px;
+	background-color: rgb(255, 104, 99);
+	border-radius: 50%;
+}
+/*工具箱 与概览使用相同图片*/
+.tic-icon-toolbox{
+	background-image: url("../img/slice/svg/icon-overview.svg");
+}
+.tic-btn:hover .tic-icon-toolbox,.tic-btn.actived .tic-icon-toolbox{
+	background-image: url("../img/slice/svg/icon-overview-hover.svg");
+}
+/*全体控制*/
+.tic-icon-controlall{
+	background-image: url("../img/slice/png/controlall.png");
+}
+.tic-btn:hover .tic-icon-controlall,.tic-btn.actived .tic-icon-controlall{
+	background-image: url("../img/slice/png/controlall-hover.png");
+}
+/*概览*/
+.tic-icon-overview{
+	background-image: url("../img/slice/svg/icon-overview.svg");
+}
+.tic-btn:hover .tic-icon-overview,.tic-btn.actived .tic-icon-overview{
+	background-image: url("../img/slice/svg/icon-overview-hover.svg");
+}
+.tic-btn.disabled .tic-icon-overview{
+	background-image: url("../img/slice/svg/icon-overview-disabled.svg");
+}
+/*设置*/
+.tic-icon-setting{
+	background-image: url("../img/slice/svg/icon-setting.svg");
+}
+.tic-btn:hover .tic-icon-setting,.tic-btn.actived .tic-icon-setting{
+	background-image: url("../img/slice/svg/icon-setting-hover.svg");
+}
+.tic-btn.disabled .tic-icon-setting{
+	background-image: url("../img/slice/svg/icon-setting-disabled.svg");
+}
+/*等待*/
+.tic-icon-waiting{
+	background-image: url("../img/slice/svg/icon-waiting.svg");
+}
+.tic-btn:hover .tic-icon-waiting,.tic-btn.actived .tic-icon-waiting{
+	background-image: url("../img/slice/svg/icon-waiting-hover.svg");
+}
+.tic-btn.disabled .tic-icon-waiting{
+	background-image: url("../img/slice/svg/icon-waiting-disabled.svg");
+}
+/*手*/
+.tic-icon-hand{
+	background-image: url("../img/slice/svg/icon-hand.svg");
+}
+.tic-btn:hover .tic-icon-hand,.tic-btn.actived .tic-icon-waiting{
+	background-image: url("../img/slice/svg/icon-hand-hover.svg");
+}
+.tic-btn.disabled .tic-icon-hand{
+	background-image: url("../img/slice/svg/icon-hand-disabled.svg");
+
+}
+/*视频位 白板权限 ## */
+.tic-icon-vc-draw{
+	width: 40px;
+	height: 40px;
+	background-image: url("../img/slice/svg/icon-video.svg");
+}
+.tic-btn:hover .tic-icon-vc-draw{
+	background-image: url("../img/slice/svg/icon-video-hover.svg");
+}
+a.tic-btn.disabled .tic-icon-vc-draw{
+	cursor: pointer;
+	background-image: url("../img/slice/svg/icon-video-disabled.svg");
+}
+a.tic-btn.disabled:hover .tic-icon-vc-draw{
+	background-image: url("../img/slice/svg/icon-video-disabled-hover.svg");
+}
+/*语音*/
+.tic-icon-voice{
+	background-image: url("../img/slice/svg/icon-voice.png");
+	background-size: 100%;
+}
+.tic-btn:hover .tic-icon-voice{
+	/*background-image: url("../img/slice/svg/icon-voice-hover.svg");*/
+}
+.actived .tic-icon-voice{
+	background-image: url("../img/slice/svg/volume/video_icon_mic_animate_1@2x.png");
+	background-size: 100%;
+}
+.actived.volume-1 .tic-icon-voice{
+	background-image: url("../img/slice/svg/volume/video_icon_mic_animate_1@2x.png");
+}
+.actived.volume-2 .tic-icon-voice{
+	background-image: url("../img/slice/svg/volume/video_icon_mic_animate_2@2x.png");
+}
+.actived.volume-3 .tic-icon-voice{
+	background-image: url("../img/slice/svg/volume/video_icon_mic_animate_3@2x.png");
+}
+.actived.volume-4 .tic-icon-voice{
+	background-image: url("../img/slice/svg/volume/video_icon_mic_animate_4@2x.png");
+}
+.actived.volume-5 .tic-icon-voice{
+	background-image: url("../img/slice/svg/volume/video_icon_mic_animate_5@2x.png");
+}
+.actived.volume-6 .tic-icon-voice{
+	background-image: url("../img/slice/svg/volume/video_icon_mic_animate_6@2x.png");
+}
+.actived.volume-7 .tic-icon-voice{
+	background-image: url("../img/slice/svg/volume/video_icon_mic_animate_7@2x.png");
+}
+.actived.volume-8 .tic-icon-voice{
+	background-image: url("../img/slice/svg/volume/video_icon_mic_animate_8@2x.png");
+}
+.actived.volume-9 .tic-icon-voice{
+	background-image: url("../img/slice/svg/volume/video_icon_mic_animate_9@2x.png");
+}
+.actived.volume-10 .tic-icon-voice{
+	background-image: url("../img/slice/svg/volume/video_icon_mic_animate_10@2x.png");
+}
+.disabled .tic-icon-voice{
+	background-image: url("../img/slice/svg/icon-voice-disabled.png");
+	background-size: 100%;
+}
+.disabled:hover .tic-icon-voice{
+	/*background-image: url("../img/slice/svg/icon-voice-disabled-hover.svg");*/
+}
+/*语音1 */
+.tic-icon-voice1{
+	width: 40px;
+	height: 40px;
+	background-image: url("../img/slice/svg/icon-voice1.svg");
+}
+.tic-btn:hover .tic-icon-voice1{
+	background-image: url("../img/slice/svg/icon-voice1-hover.svg");
+}
+a.tic-btn.disabled .tic-icon-voice1{
+	cursor: pointer;
+	background-image: url("../img/slice/svg/icon-voice1-disabled.svg");
+}
+a.tic-btn.disabled:hover .tic-icon-voice1{
+	background-image: url("../img/slice/svg/icon-voice1-disabled-hover.svg");
+}
+/*语音2*/
+.tic-icon-voice2{
+	width: 42px;
+	height: 42px;;
+	background-image: url("../img/slice/svg/icon-voice2.svg");
+}
+.tic-btn:hover .tic-icon-voice2{
+	background-image: url("../img/slice/svg/icon-voice2-hover.svg");
+}
+a.tic-btn.disabled  .tic-icon-voice2{
+	background-image: url("../img/slice/svg/icon-voice2-disabled.svg");
+}
+a.tic-btn.disabled:hover .tic-icon-voice2{
+	cursor: pointer;
+	background-image: url("../img/slice/svg/icon-voice2-disabled-hover.svg");
+}
+/*摄像头 */
+.tic-icon-video{
+	width: 40px;
+	height: 40px;
+	background-image: url("../img/slice/svg/icon-video.svg");
+}
+.tic-btn:hover .tic-icon-video{
+	background-image: url("../img/slice/svg/icon-video-hover.svg");
+}
+a.tic-btn.disabled .tic-icon-video{
+	cursor: pointer;
+	background-image: url("../img/slice/svg/icon-video-disabled.svg");
+}
+a.tic-btn.disabled:hover .tic-icon-video{
+	background-image: url("../img/slice/svg/icon-video-disabled-hover.svg");
+}
+/*摄像头2 */
+.tic-icon-camera2{
+	width: 42px;
+	height: 42px;
+	background-image: url("../img/slice/svg/camera2.svg");
+}
+.tic-btn:hover .tic-icon-camera2{
+	background-image: url("../img/slice/svg/camera2-hover.svg");
+}
+a.tic-btn.disabled .tic-icon-camera2{
+	cursor: pointer;
+	background-image: url("../img/slice/svg/camera2-disabled.svg");
+}
+a.tic-btn.disabled:hover .tic-icon-camera2{
+	background-image: url("../img/slice/svg/camera2-disabled-hover.svg");
+}
+/*踢人*/
+.tic-icon-out{
+	width: 40px;
+	height: 40px;
+	background-image: url("../img/slice/svg/icon-out.svg");
+}
+.tic-btn:hover .tic-icon-out{
+	background-image: url("../img/slice/svg/icon-out-hover.svg");
+}
+
+.disabled .tic-icon-out{
+	background-image: url("../img/slice/svg/icon-out-disabled.svg");
+}
+a.tic-btn.disabled .tic-icon-out{
+	cursor: pointer;
+	background-image: url("../img/slice/svg/icon-out-disabled.svg");
+}
+a.tic-btn.disabled:hover .tic-icon-out{
+	cursor: pointer;
+	background-image: url("../img/slice/svg/icon-out-disabled-hover.svg");
+}
+/*成功*/
+.tic-icon-success{
+	width: 40px;
+	height: 40px;
+	background-image: url("../img/slice/svg/icon-success.svg");
+}
+.tic-btn:hover .tic-icon-success{
+	background-image: url("../img/slice/svg/icon-success-hover.svg");
+}
+a.tic-btn.disabled .tic-icon-success{
+	cursor: pointer;
+	background-image: url("../img/slice/svg/icon-success-disabled.svg");
+}
+.disabled:hover .tic-icon-success{
+
+	background-image: url("../img/slice/svg/icon-success-disabled.svg");
+}
+a.tic-btn.disabled:hover .tic-icon-success{
+	cursor: pointer;
+	background-image: url("../img/slice/svg/icon-success-disabled-hover.svg");
+}
+/* 激励 */
+.tic-icon-excitation{
+	width: 42px;
+	height: 42px;
+	background-image: url("../img/slice/svg/icon-excitation.svg");
+}
+.tic-btn:hover .tic-icon-excitation{
+	background-image: url("../img/slice/svg/icon-excitation-hover.svg");
+}
+a.tic-btn.disabled .tic-icon-excitation{
+	cursor: pointer;
+	background-image: url("../img/slice/svg/icon-excitation-disabled.svg");
+}
+a.tic-btn.disabled:hover .tic-icon-excitation{
+	background-image: url("../img/slice/svg/icon-excitation-disabled-hover.svg");
+}
+/* 禁言 */
+.tic-icon-forbidden{
+	width: 22px;
+	height: 22px;
+	background-image: url("../img/slice/svg/forbidden.svg");
+}
+/* 取消禁言 */
+.tic-icon-cancel-forbidden{
+	width: 22px;
+	height: 22px;
+	background-image: url("../img/slice/svg/cancel-forbidden.svg");
+}
+/*老师*/
+.tic-icon-teacher{
+	background-image: url("../img/slice/svg/icon-teacher.svg");
+}
+/*学生*/
+.tic-icon-student{
+	background-image: url("../img/slice/svg/icon-student.svg");
+}
+.tic-icon-custom{
+	background-size: cover;
+	border-radius: 10px;
+}
+button.toggle-sidebar {
+	background:#212224;
+}
+/*收缩*/
+.tic-icon-toggle{
+	background-image: url("../img/slice/svg/icon-toggle-hover.svg");
+	opacity: .6;
+	cursor: pointer;
+}
+.tic-icon-toggle:hover{
+	opacity: 1;
+}
+
+.actived .tic-icon-toggle{
+	transform:scaleX(-1)
+}
+.actived .tic-icon-toggle:hover{
+	transform:scaleX(-1)
+}
+
+.tv-app button:focus .tic-icon-toggle{
+	background-image: url("../img/slice/svg/icon-toggle-focus.svg");
+	transform:scale(-1);
+	opacity: 1;
+}
+.tv-app button.actived:focus .tic-icon-toggle{
+	transform:scale(1);
+	opacity: 1;
+}
+.tv-app button:focus {
+	transform: scale(1.15);
+	transition: all 0.5s;
+}
+
+/*收缩*/
+.tic-board-toggle{
+	background-image: url("../img/slice/png/minimum_active.png");
+	opacity: .7;
+	cursor: pointer;
+}
+.tic-board-toggle:hover{
+	opacity: 1;
+}
+.maximum .tic-board-toggle{
+	background-image: url("../img/slice/png/maximum_active.png");
+	opacity: .7;
+}
+.maximum .tic-board-toggle:hover{
+	opacity: 1;
+}
+
+
+
+.tv-app button:focus .tic-board-toggle{
+	background-image: url("../img/slice/png/minimum_active_focus.png");
+	opacity: 1;
+}
+
+.tv-app button.maximum:focus .tic-board-toggle{
+	background-image: url("../img/slice/png/maximum_active_focus.png");
+	opacity: 1;
+}
+
+
+
+/*收缩*/
+.tic-icon-toggle-video{
+	background-image: url("../img/slice/svg/toggle-video.png");
+	background-position: center center;
+	cursor: pointer;
+}
+.tic-icon-toggle-video:hover{
+	background-image: url("../img/slice/svg/toggle-video.png");
+}
+.actived .tic-icon-toggle-video{
+	background-image: url("../img/slice/svg/toggle-video-active.png");
+	background-position: center center;
+}
+.actived .tic-icon-toggle-video:hover{
+	background-image: url("../img/slice/svg/toggle-video-active.png");
+}
+/*****工具 start*****/
+/*工具背景*/
+.tic-icon-bgtool{
+	background-image: url(../img/slice/svg/icon-bgtool.svg);
+}
+.tic-icon-bgtool:hover,.tic-btn.actived .tic-icon-bgtool{
+	background-image: url(../img/slice/svg/icon-bgtool-hover.svg);
+}
+/*选择*/
+.tic-icon-toolchoose{
+	background-image: url("../img/slice/svg/icon-toolchoose.svg");
+}
+.tic-btn:hover .tic-icon-toolchoose{
+	background-image: url("../img/slice/svg/icon-toolchoose-hover.svg");
+}
+.active .tic-icon-toolchoose{
+	background-image: url("../img/slice/svg/icon-toolchoose-hover.svg");
+}
+/*画笔*/
+.tic-icon-toolbrush{
+	background-image: url("../img/slice/svg/icon-toolbrush.svg");
+}
+.tic-btn:hover .tic-icon-toolbrush,.tic-btn.actived .tic-icon-toolbrush{
+	background-image: url("../img/slice/svg/icon-toolbrush-hover.svg");
+}
+.active .tic-icon-toolbrush,.tic-btn.actived .tic-icon-toolbrush{
+	background-image: url("../img/slice/svg/icon-toolbrush-hover.svg");
+}
+/*形状*/
+.tic-icon-toolgraphical{
+	background-image: url("../img/slice/png/icon-toolgraphical.png");
+}
+.tic-btn:hover .tic-icon-toolgraphical,.tic-btn.actived .tic-icon-toolgraphical{
+	background-image: url("../img/slice/png/icon-toolgraphical-hover.png");
+}
+.active .tic-icon-toolgraphical {
+	background-image: url("../img/slice/png/icon-toolgraphical-hover.png");
+}
+/*文本*/
+.tic-icon-tooltext{
+	background-image: url("../img/slice/svg/icon-tooltext.svg");
+}
+.tic-btn:hover .tic-icon-tooltext,.tic-btn.actived .tic-icon-tooltext{
+	background-image: url("../img/slice/svg/icon-tooltext-hover.svg");
+}
+.active .tic-icon-tooltext {
+	background-image: url("../img/slice/svg/icon-tooltext-hover.svg");
+}
+/*橡皮*/
+.tic-icon-toolrubber{
+	background-image: url("../img/slice/svg/icon-toolrubber.svg");
+}
+.tic-btn:hover .tic-icon-toolrubber,.tic-btn.actived .tic-icon-toolrubber{
+	background-image: url("../img/slice/svg/icon-toolrubber-hover.svg");
+}
+.active .tic-icon-toolrubber {
+	background-image: url("../img/slice/svg/icon-toolrubber-hover.svg");
+}
+/*撤销*/
+.tic-icon-toolrevoke{
+	background-image: url("../img/slice/svg/icon-toolrevoke.svg");
+}
+.tic-btn:hover .tic-icon-toolrevoke,.tic-btn.actived .tic-icon-toolrevoke{
+	background-image: url("../img/slice/svg/icon-toolrevoke-hover.svg");
+}
+/*恢复*/
+.tic-icon-toolrecovery{
+	background-image: url("../img/slice/svg/icon-toolrecovery.svg");
+}
+.tic-btn:hover .tic-icon-toolrecovery,.tic-btn.actived .tic-icon-toolrecovery{
+	background-image: url("../img/slice/svg/icon-toolrecovery-hover.svg");
+}
+/*清空*/
+.tic-icon-tooldel{
+	background-image: url("../img/slice/svg/icon-tooldel.svg");
+}
+.tic-btn:hover .tic-icon-tooldel,.tic-btn.actived .tic-icon-tooldel{
+	background-image: url("../img/slice/svg/icon-tooldel-hover.svg");
+}
+/*颜色*/
+.tic-icon-toolcolor{
+	background-image: url("../img/slice/svg/icon-toolcolor.svg");
+}
+.tic-btn:hover .tic-icon-toolcolor,.tic-btn.actived .tic-icon-toolcolor{
+	background-image: url("../img/slice/svg/icon-toolcolor-hover.svg");
+}
+/*工具 新建*/
+.tic-icon-tooladd{
+	background-image: url("../img/slice/svg/icon-tooladd.svg");
+}
+.tic-btn:hover .tic-icon-tooladd,.tic-btn.actived .tic-icon-tooladd{
+	background-image: url("../img/slice/svg/icon-tooladd-hover.svg");
+}
+/*工具 拖动*/
+.tic-icon-tooldrag{
+	background-image: url("../img/slice/svg/tool/tooldrap-hover.svg");
+	background-size: 100%;
+	opacity: .4;
+}
+.tic-btn:hover .tic-icon-tooldrag, .tic-btn.actived .tic-icon-drag, .active .tic-icon-tooldrag{
+	background-color:rgb(16,16,16);
+	opacity: 1;
+}
+/*加号*/
+.tic-icon-plus{
+	width: 14px;
+	height: 14px;
+	background-image: url("../img/slice/svg/icon-plus-hover.svg");
+	opacity: 0.4;
+	background-size: 100%;
+}
+.tic-btn:hover .tic-icon-plus,.tic-btn.actived .tic-icon-plus{
+	opacity: 1;
+}
+.tic-btn.disable .tic-icon-plus,.tic-btn.disable:hover .tic-icon-plus{
+	opacity: 0.3;
+}
+
+/*方向 左*/
+.tic-icon-left{
+	width: 16px;
+	height: 16px;
+	/*background-image: url("../img/slice/svg/tool/next-page.png");*/
+	background-image: url("../img/slice/svg/tool/prev-page.png");
+	background-size: 100%;
+	opacity: .4;
+}
+.tic-btn:hover .tic-icon-left{
+	opacity: 1;
+}
+.tic-btn.disabled .tic-icon-left{
+	opacity: .3;
+}
+/*方向 左*/
+.tic-icon-prev{
+	width: 16px;
+	height: 16px;
+	/*background-image: url("../img/slice/svg/tool/next-page.png");*/
+	background-image: url("../img/slice/svg/tool/prev-step.png");
+	background-size: 100%;
+	opacity: .4;
+}
+.tic-btn:hover .tic-icon-prev{
+	opacity: 1;
+}
+.tic-btn.disabled .tic-icon-prev{
+	opacity: .3;
+}
+/*方向 右*/
+.tic-icon-right{
+	width: 16px;
+	height: 16px;
+	background-image: url("../img/slice/svg/tool/next-page.png");
+	background-size: 100%;
+	opacity: .4;
+}
+.tic-btn:hover .tic-icon-right{
+	opacity: 1;
+}
+.tic-btn.disabled .tic-icon-right{
+	opacity:.3;
+}
+/*方向 右*/
+.tic-icon-next{
+	width: 16px;
+	height: 16px;
+	background-image: url("../img/slice/svg/tool/next-step.png");
+	background-size: 100%;
+	opacity: .4;
+}
+.tic-btn:hover .tic-icon-next{
+	opacity: 1;
+}
+.tic-btn.disabled .tic-icon-next{
+	opacity:.3;
+}
+/*暂停*/
+.tic-icon-play{
+	background-image: url("../img/slice/svg/icon-play.svg");
+}
+.tic-btn:hover .tic-icon-play{
+	background-image: url("../img/slice/svg/icon-play-hover.svg");
+}
+.tic-btn.actived .tic-icon-play{
+	background-image: url("../img/slice/svg/icon-play-actived.svg");
+}
+.tic-btn.actived:hover .tic-icon-play{
+	background-image: url("../img/slice/svg/icon-play-actived-hover.svg");
+}
+.tic-btn.disabled .tic-icon-play{
+	background-image: url("../img/slice/svg/icon-play-disabled.svg");
+}
+
+/*喇叭*/
+.tic-icon-horn{
+	width: 16px;
+	height: 16px;
+	background-image: url("../img/slice/svg/icon-horn.svg");
+}
+.tic-btn:hover .tic-icon-horn{
+	background-image: url("../img/slice/svg/icon-horn-hover.svg");
+}
+/*刷新*/
+.tic-icon-refresh{
+	width: 16px;
+	height: 16px;
+	background-image: url("../img/slice/svg/icon-refresh.svg");
+}
+.tic-btn:hover .tic-icon-refresh{
+	background-image: url("../img/slice/svg/icon-refresh-hover.svg");
+}
+/*上传*/
+.tic-icon-upload{
+	width: 16px;
+	height: 16px;
+	background-image: url("../img/slice/svg/icon-upload.svg");
+}
+.tic-btn:hover .tic-icon-upload{
+	background-image: url("../img/slice/svg/icon-upload-hover.svg");
+}
+/*弹窗 关闭*/
+.tic-icon-dialog-close{
+	height: 16px;
+	width: 16px;
+	background-image: url("../img/slice/svg/icon-dialog-close.svg");
+}
+.tic-btn-close:hover .tic-icon-dialog-close,.tic-btn:hover .tic-icon-dialog-close{
+	background-image: url("../img/slice/svg/icon-dialog-close-hover.svg");
+}
+/*返回*/
+.tic-icon-back{
+	height: 10px;
+	width: 14px;
+	background-image: url("../img/slice/svg/icon-back.svg");
+}
+.tic-icon-back:hover{
+	background-image: url("../img/slice/svg/icon-back-hover.svg");
+}
+/*加号*/
+.tic-icon-add{
+	background-image: url("../img/slice/svg/icon-add.svg");
+}
+/*滑块*/
+.tic-icon-slider{
+	height: 16px;
+	width: 16px;
+	background-image: url("../img/slice/svg/slider.svg");
+}
+
+/* 密码显示  */
+.tic-icon-show{
+	width: 18px;
+	height: 18px;
+	background-image: url(./../img/slice/png/show.png);
+}
+.tic-btn.actived .tic-icon-show{
+	background-image: url(./../img/slice/svg/show-actived.svg);
+}
+/* 最小化 */
+.tic-icon-minshow{
+	width: 16px;
+	height: 16px;
+	background-image: url(./../img/slice/png/min-show.png);
+}
+
+.tic-btn:hover .tic-icon-minshow{
+	background-image: url(./../img/slice/png/min-show-actived.png);
+}
+/* 最小化1  */
+.tic-icon-minshow1{
+	width: 16px;
+	height: 16px;
+	background-image: url(./../img/slice/png/min-show1.png);
+}
+
+.tic-btn:hover .tic-icon-minshow1{
+	background-image: url(./../img/slice/png/min-show1-actived.png);
+}
+/* 二维码 */
+.tic-icon-code{
+	width: 32px;
+	height: 32px;
+	background-image: url(./../img/slice/png/code.png);
+}
+
+.tic-btn:hover .tic-icon-code{
+	background-image: url(./../img/slice/png/code-actived.png);
+}
+/* 下拉 s */
+.tic-dropdown .tic-icon-drop{
+	width: 16px;
+	height: 16px;
+	background-image: url(./../img/slice/svg/select-arrow.svg);
+}
+.tic-dropdown.actived .tic-icon-drop{
+	width: 16px;
+	height: 16px;
+	background-image: url(./../img/slice/svg/select-arrow-actived.svg);
+}
+/*加载中*/
+.tic-icon-loading{
+	width: 60px;
+	height: 60px;
+	background-image: url("../img/slice/svg/loading.svg");
+	-moz-animation: spin .8s infinite linear;
+	-webkit-animation: spin .8s infinite linear;
+	animation: spin .8s infinite linear;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg)
+	}
+
+	100% {
+		transform: rotate(359deg)
+	}
+}
+/* logo */
+.tic-icon-logo{
+	display: inline-block;
+	width: 58px;
+	height: 42px;
+	background-image: url("./../img/slice/png/logo2.png");
+}
+/* 弹窗 应用 icon s*/
+.tic-icon-app-qq{
+	display: inline-block;
+	vertical-align: middle;
+	width:42px;
+	height: 42px;
+	background-image: url("http://ue.qzone.qq.com/42x42");
+}
+/* 弹窗 应用 icon e */
+
+/* 聊天应用页面 s */
+.tic-chatapp-book{
+	display: inline-block;
+	vertical-align: middle;
+	width:24px;
+	height: 24px;
+	background-image: url("./../img/slice/svg/chatapp/book.svg");
+}
+.tic-btn.actived .tic-chatapp-book,.tic-btn:hover .tic-chatapp-book{
+	background-image: url("./../img/slice/svg/chatapp/book-actived.svg");
+}
+.tic-chatapp-news{
+	display: inline-block;
+	vertical-align: middle;
+	width:24px;
+	height: 24px;
+	background-image: url("./../img/slice/svg/chatapp/news.svg");
+}
+.tic-btn.actived .tic-chatapp-news,.tic-btn:hover .tic-chatapp-news{
+	background-image: url("./../img/slice/svg/chatapp/news-actived.svg");
+}
+.tic-chatapp-file{
+	display: inline-block;
+	vertical-align: middle;
+	width:24px;
+	height: 24px;
+	background-image: url("./../img/slice/svg/chatapp/file.svg");
+}
+.tic-btn.actived .tic-chatapp-file,.tic-btn:hover .tic-chatapp-file{
+	background-image: url("./../img/slice/svg/chatapp/file-actived.svg");
+}
+.tic-chatapp-setting{
+	display: inline-block;
+	vertical-align: middle;
+	width:24px;
+	height: 24px;
+	background-image: url("./../img/slice/svg/chatapp/setting.svg");
+}
+.tic-btn.actived .tic-chatapp-setting,.tic-btn:hover .tic-chatapp-setting{
+	background-image: url("./../img/slice/svg/chatapp/setting-actived.svg");
+}
+/* 聊天应用页面 e */
+
+/* 工具箱 s */
+/* qq */
+.tic-toolbox-qq{
+	display: inline-block;
+	vertical-align: middle;
+	width: 42px;
+	height: 42px;
+	background-image: url("../img/slice/svg/tool-box/qq.svg");
+}
+.actived .tic-toolbox-qq{
+	background-image: url("../img/slice/svg/tool-box/qq-actived.svg");
+}
+/* 微信 */
+.tic-toolbox-wechat{
+	display: inline-block;
+	vertical-align: middle;
+	width: 42px;
+	height: 42px;
+	background-image: url("../img/slice/svg/tool-box/wechat.svg");
+}
+.actived .tic-toolbox-wechat{
+	background-image: url("../img/slice/svg/tool-box/wechat-actived.svg");
+}
+/* office */
+.tic-toolbox-office{
+	display: inline-block;
+	vertical-align: middle;
+	width: 42px;
+	height: 42px;
+	background-image: url("../img/slice/svg/tool-box/office.svg");
+}
+.actived .tic-toolbox-office{
+	background-image: url("../img/slice/svg/tool-box/office-actived.svg");
+}
+/* office */
+.tic-toolbox-chro{
+	display: inline-block;
+	vertical-align: middle;
+	width: 42px;
+	height: 42px;
+	background-image: url("../img/slice/svg/tool-box/chro.svg");
+}
+.actived .tic-toolbox-chro{
+	background-image: url("../img/slice/svg/tool-box/chro-actived.svg");
+}
+/*屏幕*/
+.tic-coursetool-screen{
+	background-image: url("../img/slice/svg/coursetool-screen.svg");
+}
+.actived .tic-coursetool-screen,
+.tic-coursetool-screen:hover,
+.tic-media__list:hover .tic-coursetool-screen{
+	background-image: url("../img/slice/svg/coursetool-screen-hover.svg");
+}
+/*课堂工具 - 播放视频*/
+.tic-coursetool-play{
+	background-image: url("../img/slice/svg/coursetool-play.svg");
+}
+.actived .tic-coursetool-play,
+.tic-coursetool-play:hover,
+.tic-media__list:hover .tic-coursetool-play{
+	background-image: url("../img/slice/svg/coursetool-play-hover.svg");
+}
+/* 签到本  */
+.tic-toolbox-attendance{
+	background-image: url("../img/slice/svg/tool-box/text.svg");
+}
+.tic-media__list:hover .tic-toolbox-attendance,
+.tic-media__list.actived .tic-toolbox-attendance{
+	background-image: url("../img/slice/svg/tool-box/text-actived.svg");
+}
+/* 答题器 */
+.tic-toolbox-answer{
+	background-image: url("../img/slice/svg/tool-box/answer.svg");
+}
+.tic-media__list:hover .tic-toolbox-answer,
+.tic-media__list.actived .tic-toolbox-answer{
+	background-image: url("../img/slice/svg/tool-box/answer-actived.svg");
+}
+/* 声音 */
+.tic-toolbox-voice{
+	background-image: url("../img/slice/svg/tool-box/voice-disabled.svg");
+	background-size: contain;
+}
+.tic-media__list:hover .tic-toolbox-voice,.tic-toolbox-voice:hover {
+	background-image: url("../img/slice/svg/tool-box/voice-disabled-actived.svg");
+	background-size: contain;
+}
+.tic-media__list.actived .tic-toolbox-voice,.tic-toolbox-voice.actived{
+	background-image: url("../img/slice/svg/tool-box/voice-disabled-actived.svg");
+	background-size: contain;
+}
+/* 全体下台 */
+.tic-toolbox-camera{
+	background-image: url("../img/slice/svg/tool-box/camera.svg");
+	background-size: contain;
+}
+.tic-media__list:hover .tic-toolbox-camera,.tic-toolbox-camera:hover{
+	background-image: url("../img/slice/svg/tool-box/camera-actived.svg");
+	background-size: contain;
+}
+.tic-media__list.actived .tic-toolbox-camera,.tic-toolbox-camera.actived{
+	background-image: url("../img/slice/svg/tool-box/camera-actived.svg");
+	background-size: contain;
+}
+/* 工具箱 e */
+
+/* 答题 s */
+/* 对 */
+.tic-icon-answer-success{
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+	background-image: url("../img/slice/svg/answer-success.svg");
+}
+/* 错 */
+.tic-icon-answer-error{
+	width: 18px;
+	height: 18px;
+	vertical-align: top;
+	background-image: url("../img/slice/svg/answer-error.svg");
+}
+/* 答题 */

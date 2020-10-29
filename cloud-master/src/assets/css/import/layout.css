@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/*********** 公用样式 start ***********/
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+/* 全局公用类 */
+.mt-5{
+    margin-top: 5px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.ml-5{
+    margin-left: 5px;
+}
+.ml-10{
+    margin-left: 10px;
+}
+.ml-20{
+    margin-left: 20px;
+}
+.none,
+.hide {
+    display: none;
+}
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: table
+}
+
+.clearfix:after {
+    clear: both
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+/*通用布局 start*/
+.tic-container{
+    height: 100%;
+    width: 100%;
+    background: #212224;
+    position: relative;
+    /* min-height: 500px;
+    min-width: 1024px; */
+}
+.tic-container__main{
+    flex: 1;
+    overflow: hidden;
+}
+.tic-container__main-inner{
+    flex: 1;
+    height: 100%;
+}
+/*通用布局 end*/
+/*滚动条 start*/
+.roll-scroll::-webkit-scrollbar,body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border-radius: 8px;
+}
+.roll-scroll::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb{
+    background: rgba(138,144,153,1);
+    border-radius: 8px;
+}
+.roll-scroll::-webkit-scrollbar-track,body::-webkit-scrollbar-track{
+    border-radius: 8px;
+}
+/*滚动条 end*/
+/*文字 start*/
+.text{
+    color: #444;
+    font-size: 12px;
+}
+.is-success{
+    color: #0A818C !important;
+}
+.is-error{
+    color: #ff6763 !important;
+}
+.is-normal{
+    color: #5e626a !important;
+}
+.is-actived{
+    color: #4F5359 !important;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+/*文字 end*/
+
+/*********** 公用样式 end ***********/

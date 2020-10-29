@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zhCN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>腾云课堂</title>
+  <script src="https://res.qcloudtiw.com/board/2.5.3/TEduBoard.min.js"></script>
+  <script src="https://res.qcloudtiw.com/tcic/sdk/tcic-sdk.min.js"></script>
+  <style>
+html, body{
+  height: 100%;
+}
+.tcic-main{
+  height: 100%;
+  background: url("https://main.qcloudimg.com/raw/fe1f2f9750b3131c040bb63adbff3c1e.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.tcic-login {
+  position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #34363b;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .35);
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+    padding: 40px;
+}
+.tcic-login-title {
+    content: url("https://main.qcloudimg.com/raw/b6ab0634483005b10491b79eec3f7020.png");
+    margin: auto;
+}
+.tcic-login-row {
+    width: 260px;
+    margin: auto;
+    margin-top: 50px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #abaeb4;
+}
+img.tcic-login-class {
+    content: url("https://main.qcloudimg.com/raw/b141cc3ae727ddde38f7d1050584c623.png");
+}
+img.tcic-login-account {
+    content: url("https://main.qcloudimg.com/raw/187ca7d109130440082ec85a2a1430ce.png");
+}
+input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+}
+button.tcic-login-btn {
+    background-color: #0a818c;
+    width: 268px;
+    margin-left: 15px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-top: 50px;
+    color: white;
+}
+button.tcic-login-btn:hover {
+    background-color: #059dab;
+}
+.tcic-login-error {
+    color: rgba(255, 104, 99, .9);
+    font-size: 12px;
+    margin-left: 20px;
+}
+  </style>
+</head>
+<body>
+  <div class="tcic-main">
+    <div class="tcic-login">
+      <div class="tcic-login-title">         
+      </div>
+      <div class="tcic-login-row">
+        <img class="tcic-login-class" />
+        <input type="text" id="classid" placeholder="请输入课堂编号" autocomplete="off" />
+      </div>
+      <div class="tcic-login-row">
+        <img class="tcic-login-account" />
+        <input type="text" id="account" placeholder="请输入用户帐号" autocomplete="off" />
+      </div>
+      <div id="errormsg" class="tcic-login-error">        
+      </div>
+      <button class="tcic-login-btn" onclick="enter()">进入课堂</button>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+function showErrorMsg(msg){
+  document.getElementById("errormsg").textContent = msg;
+}
+function enter(){
+  let classid = document.getElementById("classid").value;
+  let account = document.getElementById("account").value;
+  if (!classid || !account){
+    showErrorMsg("输入信息不能为空");
+    return;
+  }
+  TCIC.TAccount.instance.quickLogin(account, classid*1, (code, msg, rsp)=>{
+    if (code===0){
+      window.location = `index.html?schoolid=${rsp.enterId}&classid=${classid}&userid=${rsp.userId}&usersig=${rsp.userSig}&token=${rsp.token}`
+    }else{
+      showErrorMsg(`登录失败:${code}|${msg}`)
+    }
+  })
+}
+
+document.onkeyup = function(e) {
+  var event = e || window.event;
+  var key = event.which || event.keyCode || event.charCode;
+  if (key == 13) {
+    enter();
+  }
+}
+  </script>
+</body>
+</html>

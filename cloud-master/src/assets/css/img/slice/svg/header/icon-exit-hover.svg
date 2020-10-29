@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icon/导航/关闭hover</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon/导航/关闭hover" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="编组-3" transform="translate(7.000000, 6.000000)" stroke="#9EA5B3" stroke-width="2">
+            <g id="编组-2" transform="translate(9.000000, 5.000000)">
+                <polyline id="Rectangle-10" transform="translate(5.217391, 4.782609) scale(-1, -1) rotate(-45.000000) translate(-5.217391, -4.782609) " points="2.02898551 7.97101449 2.02898551 1.5942029 8.4057971 1.5942029"></polyline>
+            </g>
+            <polyline id="路径-2" points="4.7826087 0 0 0 0 19.1304348 4.7826087 19.1304348"></polyline>
+            <line x1="18" y1="10" x2="6" y2="10" id="路径-6"></line>
+        </g>
+    </g>
+</svg>

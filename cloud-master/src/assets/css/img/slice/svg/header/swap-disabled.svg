@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>课件备份</title>
+    <desc>Created with Sketch.</desc>
+    <g id="PC-端设计稿" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="图标备份" transform="translate(-773.000000, -94.000000)">
+            <g id="课件备份" transform="translate(774.000000, 95.000000)">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <g>
+                    <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                    <g id="编组-11" transform="translate(1.000000, 0.000000)" fill="#4B505A">
+                        <rect id="矩形备份-7" x="2" y="0" width="2" height="16"></rect>
+                        <circle id="椭圆形备份" cx="3" cy="11" r="3"></circle>
+                        <rect id="矩形备份-8" x="10" y="0" width="2" height="16"></rect>
+                        <circle id="椭圆形备份-4" cx="11" cy="5" r="3"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

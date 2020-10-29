@@ -1,0 +1,14 @@
+{
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "semi": true,
+      "printWidth": 260
+    }
+  },
+  "cSpell.words": [
+    "TCIC",
+    "tmain"
+  ]
+}

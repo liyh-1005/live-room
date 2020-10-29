@@ -1,0 +1,235 @@
+
+.tic-player__tool {
+  position: absolute;
+  z-index: 30000;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(33, 35, 37, 0.8);
+  padding: 10px;
+  z-index: 30001;
+}
+
+.tic-player__tool:hover,
+.tic-player__tool:hover .tic-toolbar-dorp {
+  transition: 0.5s all;
+  background-color: #212325;
+  z-index: 14999
+}
+
+.tic-player__tool .tic-toolbar-menu>li+li {
+  margin-top: 10px;
+}
+
+.tic-player__tool .tic-toolbar-menu>li {
+  position: relative;
+}
+
+.tic-toolbar-dorp {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  background-color: rgba(33, 35, 37, 0.8);
+  padding:8px 12px;
+  width: 140px;
+  transition: all 0.15s ease;
+  visibility: hidden;
+}
+
+.tic-player__tool .current .tic-toolbar-dorp {
+  display: block;
+  visibility: visible;
+}
+
+.tic-player__tool .tic-toolbar-dorp .tic-toolbar-dorp-list+.tic-toolbar-dorp-list {
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid rgba(52, 54, 59, 0.8);
+}
+
+.tic-player__tool .tic-toolbar-dorp ul {
+  font-size: 0;
+  margin: 0 -6px 0;
+}
+
+.tic-player__tool .tic-toolbar-dorp li {
+  padding: 4px;
+  margin: 2px;
+  font-size: 0;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 28px;
+  /* height: 28px; */
+  height: 28px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+.tic-player__tool .tic-toolbar-dorp li:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+
+.tic-player__tool .toolgraphical {
+  display: block;
+  width: 20px;
+  height: 14px;
+  margin: 5px auto 1px;
+  border: 2px solid #737882;
+}
+
+.tic-player__tool .tic-toolbar-dorp .toolgraphical {
+  display: inline-block;
+  width: 18px;
+  position: absolute;
+  top:0;left:0;right:0;bottom:0;
+  margin:auto;
+}
+
+.tic-player__tool .toolgraphical.graphical-line {
+  border: 0;
+  height: 4px;
+  border-top: 2px solid #737882;
+}
+
+.tic-player__tool .toolgraphical.graphical-round {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+}
+
+.tic-player__tool .toolgraphical.graphical-wave {
+  border: none;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/slice/svg/icon-toolwave.svg);
+}
+
+.tic-player__tool .tic-toolbar-menu>li .tic-btn:hover [class*=toolgraphical],
+.tic-player__tool .tic-toolbar-menu>li .tic-btn.actived [class*=toolgraphical] {
+  border-color: #DCEBEB;
+}
+
+.tic-player__tool .tic-toolbar-dorp li:hover .toolgraphical,
+.tic-player__tool .tic-toolbar-dorp li.actived .toolgraphical {
+  border-color: #DCEBEB;
+}
+
+.tic-player__tool .tic-toolbar-dorp li:hover .graphical-wave,
+.tic-player__tool .tic-toolbar-dorp li.actived .graphical-wave {
+  background-image: url(../img/slice/svg/icon-toolwave-hover.svg);
+}
+
+
+.tic-player__tool .tic-toolbar-dorp li:hover,
+.tic-player__tool .tic-toolbar-dorp li.actived {
+  background-color: #0f1011;
+}
+
+/*线粗细 start*/
+
+.paint-brush-size {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  vertical-align: middle;
+  cursor: pointer;
+  background: #737882;
+}
+
+.tic-player__tool .tic-toolbar-dorp li:hover .paint-brush-size,
+.tic-player__tool .tic-toolbar-dorp li.actived .paint-brush-size {
+  background-color: #DCEBEB;
+}
+
+.paint-brush-size.size-8 {
+  width: 8px;
+  height: 8px;
+}
+
+.paint-brush-size.size-12 {
+  width: 12px;
+  height: 12px;
+}
+
+.paint-brush-size.size-16 {
+  width: 16px;
+  height: 16px;
+}
+
+
+/*线粗细 end*/
+
+
+/*颜色 start*/
+
+.tic-player__tool .bg-color {
+  display: block;
+  margin: 5px auto 1px;
+  width: 20px;
+  height: 14px;
+  background: white;
+}
+
+.tic-player__tool .tic-toolbar-dorp li .bg-color-border {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #737882;
+  position: absolute;
+  padding: 2px;
+  margin: auto;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+}
+
+.tic-player__tool .tic-toolbar-dorp li .bg-color {
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.tic-player__tool .tic-toolbar-dorp li:hover .bg-color-border,
+.tic-player__tool .tic-toolbar-dorp li.actived .bg-color-border {
+  /* border-color: #DCEBEB; */
+  /* border: 3px solid #DCEBEB; */
+  border: 3px solid #DCEBEB;
+  padding: 1px;
+  /* margin:2px; */
+  /* background-color: #1f2124 !important; */
+}
+
+
+/*颜色 end*/
+
+
+/*文本 start*/
+
+.tic-player__tool .tool-text {
+  display: inline-block;
+  vertical-align: middle;
+  color: #737882;
+  font-size: 12px !important;
+}
+
+.tic-player__tool .tic-toolbar-dorp li:hover .tool-text,
+.tic-player__tool .tic-toolbar-dorp li.actived .tool-text {
+  color: #DCEBEB;
+}
+
+
+/*文本 end*/
+
+
+/*工具栏 end*/

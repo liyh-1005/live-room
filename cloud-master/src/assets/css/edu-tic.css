@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/*基础格式化样式*/
+
+@import url("./import/reset.css");
+
+/*公共样式*/
+
+@import url("./import/layout.css");
+
+/*头部模块*/
+
+@import url("./import/header.css");
+
+/*iocn模块*/
+
+@import url("./import/icon.css");
+
+/*表单模块*/
+@import url("./import/form.css");
+
+/***聊天应用页面****/
+@import url("./import/chatapp.css");
+
+/** 白板工具样式 **/
+@import url("./import/boardtool.css");
+
+
+/*主要内容布局 start*/
+
+.tic-player {
+    position: absolute;
+    top: 124px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #34363B;
+    z-index: 5;
+    transition: all 0.5s ease-in-out;
+}
+
+.tic-player.fullsize {
+    top: 0;
+    bottom: 0;
+    height: 100%
+}
+
+.tic-player.hideVideo {
+    top: 0;
+    bottom: 0;
+    height: calc(100vh - 39px);
+    transition: all 0.5s ease-in-out;
+}
+
+.tic-player.tic-player--full .tic-player__box {
+    right: 0;
+}
+
+.tic-player.tic-player--full .tic-player__chatroom {
+    right: -266px;
+    overflow: hidden;
+}
+
+.tic-player__box {
+    height: 100%;
+    position: absolute;
+    /* overflow: hidden; */
+    transition: none;
+    left: 0;
+    right: 0;
+    transition: 0s all;
+}
+
+.tic-default_board__box {
+    width: 100%;
+    height: 100%;
+}
+
+
+.tic-player__showbox {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 10;
+}
+/*弹性布局 end*/
+/********** 1v1小班课堂页面 end ***********/

@@ -1,0 +1,1007 @@
+/* 盒子 s */
+
+.param-box + .param-box {
+  margin-top: 20px;
+}
+
+.param-hd {
+  padding-bottom: 20px;
+}
+
+.param-hd .title {
+  color: #737882;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.param-ft {
+  margin-top: 20px;
+  font-size: 0;
+}
+
+/* 盒子 e */
+
+/*表单 start*/
+
+input[type='range'] {
+  position: absolute;
+  top: 6px;
+  -webkit-appearance: none;
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  outline: none;
+  background: transparent;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  background: url('../img/slice/svg/slider.svg');
+}
+
+.form-list {
+  display: table;
+  color: #444;
+  font-size: 0;
+}
+
+.form-list li + li {
+  margin-top: 18px;
+}
+
+.form-list__name {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+  /* padding-right: 15px; */
+  color: #5e626a;
+}
+
+.form-list__text {
+  display: block;
+  font-size: 12px;
+  /*padding-left: 5px;*/
+  color: #444;
+}
+
+.form-list__text.text-bold {
+  font-weight: bold;
+}
+
+.form-list.form-list--full {
+  width: 100%;
+}
+
+.form-list.tea-form--horiz .form-list__name {
+  display: table-cell;
+  color: #5e626a;
+  vertical-align: middle;
+  margin-bottom: 0px;
+}
+
+.form-list.tea-form--horiz .form-list__text {
+  display: table-cell;
+  color: #5e626a;
+}
+
+.form-list.tea-form--horiz li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.form-list.tea-form--horiz li + li {
+  margin-left: 30px;
+  margin-top: 0;
+}
+
+.form-list.tea-form--vertical .form-list__name {
+  display: table-cell;
+  vertical-align: top;
+  /* padding-top: 5px; */
+  white-space: nowrap;
+}
+
+.form-list.tea-form--vertical .form-list__text {
+  display: table-cell;
+  vertical-align: top;
+  color: #5e626a;
+  /* padding-bottom: 16px; */
+}
+
+.form-list.tea-form--vertical .form-list__text-dsc {
+  padding-top: 5px;
+  display: inline-block;
+}
+
+.form-list.tea-form--vertical li {
+  display: table-row;
+  text-align: left;
+}
+
+.form-list.tea-form--vertical li .ivu-cascader-menu .ivu-cascader-menu-item {
+  display: block;
+}
+
+.form-list.tea-form--vertical .form-list li:last-child .form-list__text {
+  padding-bottom: 0px;
+}
+
+/*表单 end*/
+
+/* 开关  s */
+
+.tic-switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 20px;
+  /*-webkit-user-select:none;*/
+  /*-moz-user-select:none;*/
+  /*-ms-user-select:none;*/
+  /*user-select:none;*/
+  vertical-align: middle;
+  /* cursor: pointer; */
+}
+
+.form-unit .tic-switch {
+  margin-right: 5px;
+}
+
+.tic-switch-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* 辅助节点 */
+
+.tic-switch-helper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 26px;
+  overflow: hidden;
+  text-indent: -99px;
+  background-color: #737882;
+  padding: 0 !important;
+  transition-duration: 0.4s;
+  transition-property: background-color;
+  font-size: 0;
+  cursor: pointer;
+}
+
+/* 小圆点 */
+
+.tic-switch-helper:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  /*float:left;
+        margin-top:2px;
+        margin-left:2px;*/
+  width: 16px;
+  height: 16px;
+  border-radius: 22px;
+  background-color: #fff;
+  pointer-events: none;
+  transition-timing-function: cubic-bezier(0.54, 1.85, 0.5, 1);
+  /*(0.5,0,0.5,1)*/
+  transition-duration: 0.4s;
+  /*transition-property:transform;*/
+  transition-property: left;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tic-switch-input:checked + .tic-switch-helper:before {
+  /*IE9不支持translate，又没有针对IE9的hack，只好用left搞*/
+  /*-webkit-transform:translate3d(30px, 0, 0);
+        -ms-transform:translate3d(30px, 0, 0);
+        transform:translate3d(30px, 0, 0);*/
+  left: 17px;
+}
+
+.tic-switch:hover .tic-switch-helper:before {
+  background-color: #fff;
+}
+
+.tic-switch .switch-loading {
+  display: none;
+  width: 14px;
+  height: 14px;
+  /* background:url(img/input-loading.gif) 0 0 no-repeat; */
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  margin: -7px 0 0 0;
+}
+
+.tic-switch-checked .switch-loading {
+  right: 7px;
+  left: auto;
+}
+
+.tic-switch.indeterminate .switch-loading {
+  display: block;
+}
+
+/* 对号，错号小图标*/
+
+.tic-switch-helper:after {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-image: none;
+}
+
+.tic-switch-input:checked + .tic-switch-helper:after {
+  right: auto;
+  left: 10px;
+  background-image: none;
+}
+
+.indeterminate .tic-switch-helper:after {
+  top: 7px;
+  right: 9px;
+  width: 14px;
+  height: 14px;
+  background: none;
+}
+
+.indeterminate .tic-switch-input:checked + .tic-switch-helper:after {
+  right: auto;
+  left: 9px;
+  background: none;
+}
+
+.tic-switch-input:checked + .tic-switch-helper {
+  background-color: #0a818c;
+}
+
+.tic-switch-input:disabled + .tic-switch-helper {
+  background-color: #e5e5e5;
+  cursor: default;
+}
+
+.tic-switch-input:checked:disabled + .tic-switch-helper {
+  background-color: rgba(10, 129, 140, 0.5);
+  cursor: default;
+}
+
+/* 开关  e */
+
+/*输入框 start*/
+
+.tic-input {
+  display: inline-block;
+  height: 30px;
+  line-height: 28px;
+  background-color: transparent;
+  border: 1px solid #34363b;
+  outline: none;
+  color: #dcebeb;
+  box-sizing: border-box;
+  padding: 0 10px;
+  /* width: 166px; */
+  width: calc(100% - 110px);
+  font-size: 12px;
+}
+
+.tic-input::-webkit-input-placeholder,
+.tic-inputarea::-webkit-input-placeholder {
+  color: #4b505a;
+}
+
+.tic-input::-moz-placeholder,
+.tic-inputarea::-moz-placeholder {
+  color: #4b505a;
+}
+
+.tic-input:-ms-input-placeholder,
+.tic-inputarea:-ms-input-placeholder {
+  color: #4b505a;
+}
+
+.tic-input:-moz-placeholder,
+.tic-inputarea:-moz-placeholder {
+  color: #4b505a;
+}
+
+.tic-input:focus {
+  border-color: #0a818c;
+}
+
+/*输入框 end*/
+
+/* 多行输入 s */
+
+.tic-input-textarea {
+  font-size: 12px;
+  width: 330px;
+  display: inline-block;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  color: #171d25;
+  height: 100px;
+  resize: none;
+  box-sizing: border-box;
+  /*-webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
+	transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);*/
+}
+
+.tic-input-textarea.full-width {
+  width: 100%;
+  max-width: 100%;
+  height: 100px;
+}
+
+.tic-input-textarea.resize {
+  resize: both;
+  max-width: 100%;
+  min-width: 330px;
+  min-height: 100px;
+  max-height: 300px;
+}
+
+.tic-input-textarea:hover {
+  border-color: #bbb;
+  outline: 0 none;
+}
+
+.tic-input-textarea:focus {
+  border-color: #0a818c;
+  outline: 0 none;
+}
+
+.tic-input-textarea.disabled:hover,
+.tic-input-textarea.disabled:focus,
+.tic-input-textarea:disabled:hover,
+.tic-input-textarea:disabled:focus {
+  border-color: #ddd;
+}
+
+.tic-input-textarea.disabled,
+.tic-input-textarea:disabled {
+  background-color: #f2f2f2;
+  color: #bbb;
+  background-image: none;
+  cursor: not-allowed;
+}
+
+/* 多行输入 e */
+
+/*复选框 start*/
+
+.tic-label {
+  font-size: 12px;
+  cursor: pointer;
+  vertical-align: middle;
+  line-height: 1;
+  color: #8a9099;
+}
+
+.tic-label + .tic-label {
+  margin-left: 25px;
+}
+
+.tic-label.disabled,
+.tic-checkbox:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.tic-checkbox {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  border: 1px solid #4b505a;
+  box-sizing: border-box;
+  background-color: transparent;
+  vertical-align: -3px;
+  margin-right: 5px;
+}
+
+.tic-checkbox:checked:hover {
+  border-color: #0a818c;
+}
+
+.tic-checkbox:checked,
+.tic-checkbox:checked:focus {
+  background-color: #0a818c;
+  border-color: #0a818c;
+  background-image: url(../img/slice/svg/checkbox.svg);
+  background-size: cover;
+}
+
+.form-list .tic-checkbox {
+  border: 1px solid #ddd;
+}
+
+.form-list .tic-checkbox:checked:hover,
+.form-list .tic-checkbox:checked {
+  border-color: #0a818c;
+}
+
+/*复选框 end*/
+
+/* 标签 s */
+
+.tic-tag {
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  background: rgba(221, 221, 221, 1);
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+.tic-tag.actived {
+  background: rgba(10, 129, 140, 1);
+  color: #fff;
+}
+
+/* .tic-tag:hover {
+  background: rgba(10, 129, 140, 1);
+  color: #fff;
+  transition: 0.2s all;
+} */
+
+/* 标签 e */
+
+/*按钮 start*/
+
+button.tic-btn {
+  background-color: #0a818c;
+  border: 1px solid transparent;
+  color: #dcebeb;
+  height: 30px;
+  line-height: 28px;
+  padding: 0 10px;
+  outline: none;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+.tv-app button.tic-btn {
+  background: rgba(26,27,32,.1);
+  color:#1A1B20;
+}
+.tv-app button.tic-btn.sendmsg {
+
+  background: #0a818c;
+  color:#dcebeb
+}
+.tv-app button.tic-btn:focus {
+  background: rgba(248,172,0,1);
+  color:#fff;
+}
+button.tic-btn.large{
+  font-size: 16px;
+  padding: 0 20px;
+}
+button.tic-btn.red{
+  background-color: #f56c6c;
+  border: 1px solid #f56c6c;
+}
+button.tic-btn.red:hover{
+  opacity: .9;
+  background-color: #f56c6c;
+  border: 1px solid #f56c6c;
+}
+
+button.tic-btn.sendmsg {
+  /* width: 60px; */
+  font-size: 12px;
+}
+
+button.tic-btn:hover {
+  transition: 0.5s all;
+  background-color: #489BA3;
+  border: 1px solid #489BA3;
+}
+
+button.tic-btn.disabled,
+button.tic-btn.disabled:hover {
+  cursor: not-allowed;
+  /* border-color: #34363b;
+    background-color: #34363b; */
+  border-color: #f2f2f2;
+  background-color: #f2f2f2;
+  color: #bbbbbb;
+}
+
+button.tic-btn.weak {
+  background-color: transparent;
+  border-color: #ddd;
+  color: #444444;
+}
+
+button.tic-btn.weak:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+button.tic-btn.weak.disabled,
+button.tic-btn.weak.disabled:hover {
+  border-color: #ddd;
+  color: #bbb;
+  background-color: transparent;
+}
+
+button.tic-btn.warning {
+  background-color: #ff6863;
+  border-color: #ff6863;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+button.tic-btn.warning:hover {
+  background: #e55d58;
+}
+
+button.tic-btn.warning.disabled,
+button.tic-btn.warning.disabled:hover {
+  border-color: #ddd;
+  background-color: transparent;
+}
+
+button.tic-btn .text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+button.tic-btn.v2 {
+  background-color: #059dab;
+  border: 1px solid #059dab;
+}
+
+button.tic-btn.v2:hover {
+  transition: 0.5s all;
+}
+
+button.tic-btn.v2:hover,
+button.tic-btn.v2.actived {
+  background-color: #0495a2;
+  border-color: #0495a2;
+}
+
+button.tic-btn.v2.weak {
+  background-color: #e6f2f3;
+  border-color: #e6f2f3;
+  color: #059dab;
+}
+
+button.tic-btn.v2.weak:hover,
+button.tic-btn.v2.weak.actived {
+  background-color: #abdce1;
+  border-color: #abdce1;
+}
+
+button.tic-btn.weak.ml15 {
+  margin-left: 15px;
+}
+button.tic-btn.screen-disabled{
+  opacity: .5
+}
+/*按钮 end*/
+
+/*下拉 start*/
+
+.tic-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  border: 1px solid #ddd;
+  background: url(../img/slice/svg/select-arrow.svg) #fff no-repeat right center;
+  color: #000;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  padding: 0px 24px 0px 10px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 180px;
+  font-size: 12px;
+  border-radius: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.tic-select::-ms-expand {
+  display: none;
+}
+
+.tic-select:hover,
+.tic-select:focus {
+  outline: 0 none;
+  color: #000;
+  background-color: #f2f2f2;
+  border-color: #ddd;
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.tic-select[disabled] {
+  cursor: default;
+  background-color: #f2f2f2;
+  background: url(../img/slice/svg/select-arrow.svg) no-repeat 96% center;
+  border-color: #ddd;
+  color: #bbb;
+}
+
+.tic-select.xl {
+  width: 300px;
+}
+
+.tic-select.s {
+  width: 100px;
+}
+
+.tic-select + .tic-btn {
+  margin-left: 5px;
+}
+
+/*下拉 end*/
+
+/*气泡 start*/
+
+.tic-bubble {
+  padding-top: 5px;
+  position: relative;
+  display: inline-block;
+  min-width: 30px;
+}
+
+.tic-bubble:before {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: '';
+  border: 5px dashed transparent;
+}
+
+.tic-bubble:before {
+  top: -5px;
+  left: 0%;
+  transform: translateX(100%);
+  border-bottom-color: rgba(138, 144, 153, 1);
+}
+
+.tic-bubble-inner {
+  color: #212224;
+  padding: 5px 8px;
+  line-height: initial;
+  background: rgba(138, 144, 153, 1);
+  border-radius: 4px;
+}
+
+.tic-bubble.warning:before {
+  border-bottom-color: #ff6863;
+}
+
+.tic-bubble.warning .tic-bubble-inner {
+  background-color: #ff6863;
+  color: #ffffff;
+}
+
+.tic-bubble.bubble-center:before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tic-bubble.bubble-end:before {
+  left: auto;
+  right: 0;
+  transform: translateX(-100%);
+}
+
+.tic-bubble.bubble-bottom:before {
+  top: auto;
+  bottom: -10px;
+  border-bottom-color: transparent;
+  border-top-color: rgba(138, 144, 153, 1);
+}
+
+/* 警告 */
+
+.tic-bubble.warning .tic-bubble-inner {
+  background-color: #ff6863;
+  color: #ffffff;
+}
+
+.tic-bubble.warning:before {
+  border-bottom-color: #ff6863;
+}
+
+.tic-bubble.bubble-bottom.warning:before {
+  border-color: transparent;
+  border-top-color: #ff6863;
+}
+
+/* 默认 */
+
+.tic-bubble.success .tic-bubble-inner {
+  background-color: #0a818c;
+  color: #dcebeb;
+}
+
+.tic-bubble.success:before {
+  border-bottom-color: #0a818c;
+}
+
+.tic-bubble.bubble-bottom.success:before {
+  border-color: transparent;
+  border-top-color: #0a818c;
+}
+
+/*气泡 end*/
+
+/*滑块 start*/
+
+.tic-adjust {
+  box-sizing: border-box;
+  display: table;
+  width: 100%;
+}
+
+.tic-adjust-col {
+  display: table-cell;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 12px;
+  position: relative;
+}
+
+.tic-adjust-col:last-child {
+  width: 30px;
+  padding-left: 10px;
+  text-align: right;
+  cursor: default;
+}
+
+.tic-adjust-progress {
+  height: 3px;
+  min-width: 100px;
+  background-color: #ddd;
+  border-radius: 0;
+  position: relative;
+  border: none;
+}
+
+.tic-adjust-progress .tic-adjust-progress-value {
+  height: 3px;
+  background: #0a818c;
+  display: block;
+  border-radius: 0;
+  position: initial;
+  position: relative;
+  cursor: pointer;
+}
+
+.tic-adjust-progress .tic-adjust-progress-value [class*='tic-icon'] {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -11px;
+  cursor: pointer;
+}
+
+.tic-adjust-progress .tic-adjust-progress-value .tic-icon-circular {
+  position: absolute;
+  right: -3px;
+  top: 1px;
+  transition: none;
+  cursor: pointer;
+}
+
+.tic-progress-text {
+  vertical-align: middle;
+  color: #888;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 50px;
+  display: inline-block;
+}
+
+/*滑块 end*/
+
+/*搜索 start*/
+
+.tic-input-search {
+  position: relative;
+}
+
+.tic-input-search .tic-input {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid rgba(221, 221, 221, 1);
+  color: #444;
+  background-image: none;
+  padding-right: 45px;
+  position: relative;
+}
+
+.tic-input-search .tic-input:focus {
+  border-color: #0a818c;
+}
+
+.tic-input-search .tic-btn {
+  position: absolute;
+  content: '';
+  z-index: 99;
+  cursor: pointer;
+  right: 0px;
+  top: 0;
+  border: none;
+}
+
+.tic-input-search .tic-btn:hover {
+  border: none;
+}
+
+.tic-input-search .tic-input::-webkit-input-placeholder,
+.tic-inputarea::-webkit-input-placeholder {
+  color: #bbbbbb;
+}
+
+.tic-input-search .tic-input::-moz-placeholder,
+.tic-inputarea::-moz-placeholder {
+  color: #bbbbbb;
+}
+
+.tic-input-search .tic-input:-ms-input-placeholder,
+.tic-inputarea:-ms-input-placeholder {
+  color: #bbbbbb;
+}
+
+.tic-input-search .tic-input:-moz-placeholder,
+.tic-inputarea:-moz-placeholder {
+  color: #bbbbbb;
+}
+
+/*搜索 end*/
+
+/* 下拉 s */
+
+.tic-dropdown {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-size: 12px;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.tic-dropdown-link {
+  line-height: 30px;
+  color: #000;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  padding: 0 30px 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  min-width: 100%;
+  text-align: left;
+}
+
+.tic-dropdown-link .tic-icon-drop {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2px;
+  width: 16px;
+  height: 16px;
+}
+
+.tic-dropdown.actived .tic-filtrate-menu {
+  display: block;
+}
+
+.tic-filtrate-menu {
+  position: absolute;
+  margin-top: 5px;
+  left: 0;
+  right: auto;
+  border-radius: 0;
+  max-width: 100%;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  min-width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 12px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  z-index: 6;
+  display: none;
+}
+
+.tic-dropdown .tic-filtrate-menu li {
+  display: block;
+  margin-top: 0;
+}
+
+.tic-filtrate-menu li a {
+  height: 30px;
+  line-height: 30px;
+  color: #000;
+  padding: 0 10px;
+  text-align: left;
+}
+
+.tic-filtrate-menu li:hover,
+.tic-filtrate-menu li.actived {
+  background: rgba(10, 129, 140, 0.05);
+}
+
+/* 下拉 e */
+
+.tic-simulate-option {
+  font-size: 12px;
+  line-height: 30px;
+  position: absolute;
+  top: 32px;
+  min-width: 108px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #006eff;
+  border: 1px solid #d1d2d3;
+  border-radius: 0;
+  background: #fff;
+  z-index: 3;
+  padding-bottom: 0;
+}
+
+.tic-simulate-option li {
+  display: block;
+  overflow: hidden;
+  padding: 0 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #404a58;
+}
+
+.tic-page-select .tic-simulate-option li {
+  text-overflow: initial;
+}
+
+.tic-simulate-option li:hover {
+  background: #f2f2f2;
+}
+
+.tic-simulate-option li.actived {
+  background: #f2f2f2;
+}
+
+.tic-page .tic-page-select .tic-simulate-option {
+  top: auto;
+  bottom: 24px;
+  min-width: 48px;
+  max-height: 152px;
+  overflow: auto;
+  box-sizing: border-box;
+}

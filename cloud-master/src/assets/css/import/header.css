@@ -1,0 +1,300 @@
+/********头部 start *********/
+
+/*.tic-container__menu-inner:before{
+	content: '';
+	width: 0;
+	height:100%;
+	display: inline-block;
+	vertical-align: middle;
+}*/
+.tic-container__menu-inner {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 15px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.menu-float-left {
+  float: left;
+  height: 100%;
+}
+.menu-float-left:before {
+  content: '';
+  width: 0;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.menu-float-left.menu-float-left-screenshare {
+  display: flex;
+  align-items: center;
+}
+/*logo start*/
+.menu-logo {
+  display: inline-block;
+  vertical-align: middle;
+  height: 36px;
+  width: 36px;
+}
+.menu-logo img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-logo-screenshare {
+  display: inline-block;
+  vertical-align: middle;
+  height: 36px;
+  width: 36px;
+}
+.menu-logo-screenshare img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+/*logo end*/
+
+/* 时间 start */
+.mune-time {
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+  color: rgba(138, 144, 153, 1);
+}
+/* 时间 end */
+
+/*分割线 start*/
+.menu-line {
+  width: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  background: rgba(138, 144, 153, 0.2);
+  margin-left: 20px;
+  margin-right: 20px;
+  border-right: 1px solid rgba(33, 34, 36, 1);
+}
+/*分割线 end*/
+/*分割线 start*/
+.menu-line-screenshare {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 40px;
+}
+.menu-line-screenshare-right {
+  margin-left: 10px;
+  margin-right: 20px;
+  height: 32px;
+  margin-bottom: 20px;
+}
+/*分割线 end*/
+/* 用户名 start*/
+.menu-user {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 12px;
+}
+.menu-user-screenshare {
+  margin-left: 50px;
+}
+.menu-user__img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+.menu-user__text {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: rgba(138, 144, 153, 1);
+  line-height: initial;
+  margin-left: 10px;
+}
+/* 用户名 end*/
+/*标题 start*/
+.menu-title {
+  display: inline-block;
+  vertical-align: middle;
+  color: rgba(138, 144, 153, 1);
+  line-height: 1.6;
+  font-size: 12px;
+}
+.menu-title h3 {
+  font-weight: normal;
+  color: rgba(138, 144, 153, 1);
+  /* color:#fff; */
+}
+
+.menu-title-screenshare {
+  margin-left: 5px;
+  vertical-align: middle;
+  color: white;
+  line-height: 1.6;
+  font-size: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.menu-title-screenshare h3 {
+  font-weight: normal;
+  color: white;
+  max-width: 300px;
+  /* margin-left: 10px; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+  /* color:#fff; */
+}
+/*标题 end*/
+/* 课程状态  s*/
+.menu-tag {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 16px;
+}
+.menu-tag .tic-btn {
+  height: 20px;
+  line-height: 18px;
+  font-size: 12px;
+  border-radius: 2px;
+  padding: 0 8px;
+}
+/*系统信息 start*/
+.menu-baseinfo {
+  display: inline-block;
+  vertical-align: middle;
+}
+/*系统信息 end*/
+
+/*课程信息 start*/
+.menu-course {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 3.125%;
+  padding-left: 3.125%;
+  /* max-width: calc( 100% - 341px  - 120px - 22px - 2 * 42px - 282px); */
+}
+.menu-course__title {
+  font-size: 12px;
+  color: #fff;
+  vertical-align: middle;
+  font-weight: normal;
+  position: relative;
+  padding-right: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+  line-height: 38px;
+  height: 38px;
+}
+.menu-course__title-screenshare {
+  font-size: 12px;
+  color: #fff;
+  vertical-align: middle;
+  font-weight: normal;
+  position: relative;
+  /* padding-right: 110px; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  white-space: nowrap;
+  text-align: right;
+  line-height: 60px;
+  height: 60px;
+}
+.menu-course__time-screenshare {
+  margin-left: 10px;
+  font-size: 16px;
+  color: rgb(218, 218, 218);
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 109px;
+  text-align: left;
+}
+.menu-course__time {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 109px;
+  text-align: left;
+}
+/*课程信息 start*/
+
+/*操作iocn start*/
+.menu-operation {
+  float: right;
+  height: 100%;
+  line-height: 32px;
+  white-space: nowrap;
+  align-items: center;
+  display: flex;
+}
+.menu-operation-left {
+  float: left;
+  height: 100%;
+  line-height: 60px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+.menu-operation-right {
+  float: right;
+  height: 100%;
+  line-height: 60px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+.menu-operation__list,
+.menu-operation__list > li,
+.menu-operation__panel,
+.menu-operation__panel > li {
+  display: inline-block;
+}
+.menu-operation__list > li {
+  padding: 0 6px;
+  position: relative;
+}
+.menu-operation__list > li .tic-bubble {
+  position: absolute;
+  z-index: 9;
+  font-size: 12px;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+}
+.menu-operation__panel > li {
+  padding: 0 6px;
+}
+.menu-operation__list > li:hover .tic-bubble {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.2s all;
+}
+@media (max-width: 1100px) {
+  .menu-line {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}

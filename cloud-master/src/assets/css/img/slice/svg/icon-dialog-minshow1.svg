@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>关闭备份 16</title>
+    <desc>Created with Sketch.</desc>
+    <g id="PC-端设计稿" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="图标备份" transform="translate(-256.000000, -94.000000)">
+            <g id="关闭备份-2" transform="translate(256.000000, 94.000000)">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <g id="编组-13" transform="translate(1.000000, 3.000000)" fill="#888888" fill-rule="nonzero">
+                    <polygon id="Shape" points="13.9920259 1.9398922 0 2 0.00797411688 0.0601077971 14 0"></polygon>
+                    <polygon id="Shape备份" points="9.99202588 5.9398922 0 6 0.00797411688 4.0601078 10 4"></polygon>
+                    <polygon id="Shape备份-2" points="5.99202588 9.9398922 0 10 0.00797411688 8.0601078 6 8"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

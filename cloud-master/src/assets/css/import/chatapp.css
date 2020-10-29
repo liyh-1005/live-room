@@ -1,0 +1,200 @@
+
+.tic-player__chatroom {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(42, 44, 47, 0.95);
+	z-index: 100010;
+	transition: 0.5s all;
+}
+
+.tic-player__chatroom-bd {
+    overflow-y: scroll;
+    height: 100%;
+    padding: 10px 0;
+}
+
+
+.tic-player__chatroom-ft {
+	font-size: 0;
+	height: 60px;
+	border-top: 1px solid #34363B;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #323338;
+}
+
+.tic-player__chatroom-ft:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0;
+}
+
+.tic-player__chatroom-ft a.tic-btn {
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 22px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    cursor: default;
+}
+
+.tic-player__chatroom-ft .tic-input {
+    margin-left: 5px;
+    vertical-align: middle;
+    border-color: #34363B;
+    color: #DCEBEB;
+    flex: 1;
+}
+
+.tic-player__chatroom-ft .tic-input:focus {
+    border-color: #0A818C;
+}
+
+.tic-player__chatroom-ft button.tic-btn {
+    vertical-align: middle;
+    margin-left: 16px;
+    margin-right: 10px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+
+
+.tic-player__chatroom-tablist {
+    font-size: 0;
+    border-bottom: 1px solid rgba(115, 120, 130, 0.1);
+    position: relative;
+    text-align: center;
+    display: table;
+    width: 100%;
+}
+
+.tic-player__chatroom-tablist li {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.2;
+    vertical-align: top;
+    display: table-cell;
+}
+
+.tic-player__chatroom-tablist>li a {
+    display: inline-block;
+    color: #8A9099;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.tic-player__chatroom-tablist>li.current>a,
+.tic-player__chatroom-tablist>li:hover>a {
+    color: #0A818C;
+}
+
+.tic-player__chatroom-tablist>li.current>a:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -1px;
+    background-color: #0A818C;
+}
+
+.tic-player__chatroom-tablist>li.sub-level a:after {
+    height: 0;
+}
+
+.chatroom-msg-list li {
+    margin-top: 5px;
+	padding: 0 10px;
+}
+
+.chatroom-msg__bd {
+    padding: 5px 25px 0 30px;
+}
+
+.chatroom-msg_img {
+    display: inline-block;
+    vertical-align: top;
+    width: 34px;
+    height: 34px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+}
+
+.chatroom-msg_bubble {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 40px);
+}
+
+.chatroom-msg_user {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.chatroom-msg--name,
+.chatroom-msg--time {
+    display: inline-block;
+    vertical-align: middle;
+    color: #8A9099;
+    line-height: 1.2;
+    margin-left: 5px;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/*自己发的信息*/
+
+.chatroom-msg.own-msg {
+    direction: rtl;
+    text-align: right;
+}
+
+.chatroom-msg.own-msg .chatroom-msg_user {
+    direction: ltr;
+}
+
+.chatroom-msg.own-msg .chatroom-msg--name,
+.chatroom-msg.own-msg .chatroom-msg--time {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.chatroom-msg.own-msg .tic-bubble {
+    direction: ltr;
+}
+
+.chatroom-msg.own-msg .tic-bubble .tic-bubble-inner {
+    text-align: left;
+}
+
+.chatroom-msg.own-msg .tic-bubble:before {
+    left: initial;
+    right: 0%;
+    transform: translateX(-100%);
+}
+
+
+/*老师发的信息*/
+
+.teacher-msg .tic-bubble .tic-bubble-inner {
+    background-color: #0A818C;
+    color: #dcebeb;
+}
+
+.teacher-msg .tic-bubble:before {
+    border-bottom-color: #0A818C;
+}
+
+.chatroom-msg--tips {
+    color: #dcebeb
+}
